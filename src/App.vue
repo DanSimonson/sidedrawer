@@ -46,7 +46,7 @@
   .active {
     background-color: green;
     /*width: 250px;*/
-    width: calc(50% + 250px);
+    width: calc(2px + 30%);
   }
 
   #app {

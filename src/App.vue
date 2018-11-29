@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class='test' v-on:click="active = !active" v-bind:class={active:active}>
-      <svg width="30" height="30">
+      <svg class='burger' width="30" height="30">
         <path d="M0,5 30,5" stroke="#111" stroke-width="5" />
         <path d="M0,14 30,14" stroke="#111" stroke-width="5" />
         <path d="M0,23 30,23" stroke="#111" stroke-width="5" />
@@ -23,16 +23,30 @@
 </script>
 
 <style scoped>
+  .burger {
+    top: 20px;
+    right: 25px;
+    position: fixed;
+  }
+
+  #app {
+    position: relative;
+  }
+
   .test {
+    position: absolute;
     border: 5px solid red;
     width: 0;
     height: 95vh;
+    top: 0;
+    right: 0;
 
   }
 
   .active {
     background-color: green;
-    width: 250px;
+    /*width: 250px;*/
+    width: calc(50% + 250px);
   }
 
   #app {
